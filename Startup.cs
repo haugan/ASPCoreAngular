@@ -10,6 +10,9 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using AutoMapper;
+using ASPCoreAngular.Controllers.Resources;
+using ASPCoreAngular.Models;
 
 namespace ASPCoreAngular
 {
@@ -17,6 +20,7 @@ namespace ASPCoreAngular
     {
         public Startup(IHostingEnvironment env)
         {
+            // Configuration.
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
